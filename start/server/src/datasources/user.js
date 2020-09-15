@@ -1,6 +1,10 @@
 const { DataSource } = require('apollo-datasource');
 const isEmail = require('isemail');
 
+// Caching: Although the RESTDataSource class provides a built-in cache, 
+// the generic DataSource class does not. You can use cache primitives 
+// to build your own caching functionality.
+
 class UserAPI extends DataSource {
   constructor({ store }) {
     super();
